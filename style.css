@@ -1,0 +1,115 @@
+/* Genel sıfırlama */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Arkaplan */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  z-index: -2;
+}
+
+/* Koyu overlay */
+.background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Ortalayıcı */
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login kartı */
+.login-card {
+  background: rgba(255, 255, 255, 0.95);
+  width: 360px;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* Logo */
+.logo img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Input alanları */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #1e3c72;
+}
+
+/* Buton */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Hata mesajı */
+#errorMessage {
+  margin-top: 12px;
+  font-size: 13px;
+  color: red;
+}
+
+/* Mobil uyum */
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+  }
+}

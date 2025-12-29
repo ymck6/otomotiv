@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Otomotiv Kayıt Sistemi | Giriş</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Arkaplan -->
+  <div class="background"></div>
+    
+  <!-- Login Kartı -->
+  <div class="login-container">
+    <div class="login-card">
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="Firma Logosu" />
+      </div>
+
+      <h2>ÇELİK KARDEŞLER</h2>
+
+      <form id="loginForm">
+        <div class="input-group">
+          <input type="text" id="username" placeholder="Kullanıcı Adı" required />
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Şifre" required />
+        </div>
+
+        <button type="submit">Giriş Yap</button>
+      </form>
+
+      <p id="errorMessage"></p>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/auth.js"></script>
+</body>
+</html>
